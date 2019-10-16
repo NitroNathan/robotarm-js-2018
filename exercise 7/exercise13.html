@@ -1,28 +1,29 @@
 <html>
     <body>
+        <title>level 13</title>
         <canvas id="canvas" width="800" height="600"></canvas>
         <script src="./exercise 13.js"></script>
         <script>
             // Robotarm bibliotheek inladen
             var canvas = document.getElementById("canvas");
             var robotArm = new RobotArm(canvas);
-            
+
             // Het level inladen
-            robotArm.loadLevel("exercise 11");
-            
-            // Jou instructies volgen hier
-                for (a = 1; a <=10; a++){
-                robotArm.moveRight();
-            }
-            for (b = 1; b <=15; b++){
-                robotArm.moveLeft();
+            robotArm.randomLevel(1);
+            console.log("Level loaded");
+
+            for(i = 0; i < 8; i++) {
                 robotArm.grab();
-                if (robotArm.scan() == "white"){
-                    robotArm.moveRight();
+                if(robotArm.scan() != null) {
+                    for(j = 0; j <= i; j++) {
+                        robotArm.moveRight();
+                    }
                     robotArm.drop();
-                }
-                else{
-                    robotArm.drop();
+                    for(j = 0; j <= i; j++) {
+                        robotArm.moveLeft();
+                    }
+                } else {
+                    break;
                 }
             }
 
