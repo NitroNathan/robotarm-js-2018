@@ -1,7 +1,7 @@
 <html>
     <body>
         <canvas id="canvas" width="800" height="600"></canvas>
-        <script src="./exercise 7.js"></script>
+        <script src="./exercise 10.js"></script>
         <script>
             // Robotarm bibliotheek inladen
             var canvas = document.getElementById("canvas");
@@ -11,17 +11,17 @@
             robotArm.loadLevel("exercise 10");
 
             
-                for( var i = 9; i > 0; i--) {
+                for( var a = 9; a > 0; a--) {
                 robotArm.grab();
-                for( var k = 0; k < i; k++) {
+                for( var b = 0; b < a; b++) {
                     robotArm.moveRight();
                 }
                 robotArm.drop();
-                for(var k = 0; k < i - 1; k++) {
+                for(var b = 0; b < a - 1; b++) {
                     robotArm.moveLeft();
 
                 }
-             i--;
+             a--;
             }
 
       

@@ -399,9 +399,9 @@ var RobotArm = function (canvas) {
             case "exercise 10":
                 self.setMap([
                     ["green"],
-                    ["pink"],
+                    ["blue"],
                     ["white"],
-                    ["pink"],
+                    ["red"],
                     ["blue"]
                 ]);
                 break;

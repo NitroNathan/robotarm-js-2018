@@ -16,7 +16,7 @@ var RobotArm = function (canvas) {
     // The amount of rows to use
     self.rows = 8;
     // The speed of which the animations go
-    self.speed = 9000;
+    self.speed = 900000;
 
     // List of animations
     local.animationList = [];
@@ -399,9 +399,9 @@ var RobotArm = function (canvas) {
             case "exercise 10":
                 self.setMap([
                     ["green"],
-                    ["pink"],
+                    ["blue"],
                     ["white"],
-                    ["pink"],
+                    ["red"],
                     ["blue"]
                 ]);
                 break;
